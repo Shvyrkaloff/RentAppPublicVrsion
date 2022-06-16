@@ -1,0 +1,62 @@
+﻿@page
+@model RentApp.Pages.Products.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.UserName" class="control-label"></label>
+                <input asp-for="Product.UserName"  class="form-control" value="@User.Identity?.Name"/>
+                <span asp-validation-for="Product.UserName" id="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.AppsName" class="control-label"></label>
+                <select asp-for="Product.AppsName" class="form-control name="cars" id="cars">
+                <option value=""></option>
+                <option value="606 W 57th St">606 W 57th St</option>
+                <option value="2 Gold St">2 Gold St</option>
+                <option value="4545 Center Blvd">4545 Center Blvd</option>
+                <option value="505 W 37th St">505 W 37th St</option>
+                <option value="4545 Center Blvd">4545 Center Blvd</option>
+                <option value="200 W 26th St">200 W 26th St</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.StartTime" class="control-label"></label>
+                <input asp-for="Product.StartTime" class="form-control" />
+                <span asp-validation-for="Product.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.EndTime" class="control-label"></label>
+                <input asp-for="Product.EndTime" class="form-control" />
+                <span asp-validation-for="Product.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Members" class="control-label"></label>
+                <input asp-for="Product.Members" class="form-control" />
+                <span asp-validation-for="Product.Members" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

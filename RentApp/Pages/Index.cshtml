@@ -1,0 +1,321 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RentApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RentApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+ <header id="header" >
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
+            <div class="container">
+                <a href="#" class="navbar-brand">NewYork</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse col-4" id="navContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item">
+                            <a asp-page = "/Pages/Index" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-page = "/Products/Index" class="nav-link">For admins</a>
+                        </li>
+                    </ul>
+
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero" class="d-flex align-items-center justify-content-center" style = "width: 100%;
+    height: 100vh;
+    background-image: url('https://images.hdqwalls.com/download/new-york-empire-street-building-4k-d7-1920x1080.jpg');
+    background-size: cover;
+    position: relative;">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-8">
+                    <h1>Luxury Apartments In New York</h1>
+                    <h2>Our apartments are the best in the city at the moment.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about my-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-1 order-md-2">
+                    <img class="img-fluid" src="https://medialibrarycdn.entrata.com/media_library/3482/Los-Carneros-floor-plan-1533583514.jpg" alt="">
+                </div>
+                <div class="col-md-6 pt-5 pt-md-0 order-2 order-md-1 content">
+                    <h3>Choose Your Plan</h3>
+                    <p class="font-italic">
+                        Pick a size, view or layout just for you
+                    </p>
+                    <ul>
+                        <li> With 17 floors and over 3 dozen units to choose from, Continuum is all about choices. Giving you the freedom to choose the place that suits you.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, aliquam ipsa explicabo culpa magni corporis unde harum consectetur!</li>
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint recusandae repellendus nam minus deserunt. Porro optio expedita eligendi totam laudantium?</li>
+                        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat delectus suscipit atque iusto minus, molestiae velit soluta repudiandae nostrum, quae sed nesciunt rem illo. Unde iste alias voluptatem assumenda iusto?</li>
+                        
+                    </ul>
+                    <p>Is committed to ensuring digital accessibility for individuals with disabilities.  We are continuously working to improve the accessibility of our web experience for everyone,  and we welcome feedback and accommodation requests. If you wish to report an issue or seek an  accommodation, please let us know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta mb-5">
+        <div class="container text-center">
+            <h3>Click to get more information</h3>
+            <p>Our apartments are the best in the city at the moment. They have a modern design and all the comforts of living.</p>    
+            <a href="#" class="cta-btn">Contact Us</a>
+        </div>
+    </section>
+    <section id="team" class="team">
+        <div class="container text-center mt-5">
+            <div class="section-title">
+                <h2>Our team</h2>
+                <p>Check our team</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <div class="member-img">
+                            <img class="img-fluid" src="https://sun9-west.userapi.com/sun9-9/s/v1/ig2/uzuI1AxhboeqSl3xKMKJb3OEqTTIYibvOt71htzBcvWgp6t0mY3fKZ6umecckSTA6INaq3l1irJ-GJbI0JFNy6KN.jpg?size=500x430&quality=96&type=album" alt="">
+                            <div class="social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Galyamshin Ramil</h4>
+                            <span>Frontend developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <div class="member-img">
+                            <img class="img-fluid" src="https://sun7.userapi.com/sun7-6/s/v1/ig2/awlBE8k25ZJuod7G0HJ1_IMvnw9f3rt08JpOsHBSu0UnXr5q3HIpUCwA4ukE68vmPMNpiW_jxlSuggKYKbiXDyrX.jpg?size=2560x1707&quality=95&type=album" alt="">
+                            <div class="social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Mingaliev ZaidFlex</h4>
+                            <span>The best teacher</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <div class="member-img">
+                            <img class="img-fluid" src="https://sun9-west.userapi.com/sun9-65/s/v1/ig1/NzfkzNqwIIZYtFuLWQZU_28kvdQX2Gw2tHI3nPW8tXfa3BI_ZWGbNwj3oDzuT-40G5sH_xgC.jpg?size=1280x960&quality=96&type=album" alt="">
+                            <div class="social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Magdeeva Adelina</h4>
+                            <span>The most beautiful teacher</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="member">
+                        <div class="member-img">
+                            <img class="img-fluid" src="https://sun9-east.userapi.com/sun9-23/s/v1/ig2/k_TVLB8bRcE1bBt7UqoBn1u_Bi1G7I80jcuEJlCvxbAzsGlKGtzzXp3TDVsBc39UAc7BS5zh3RVQNVTebXL7eqxk.jpg?size=2199x1634&quality=96&type=album" alt="">
+                            <div class="social">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                  </svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Shvyrkalov Matvey</h4>
+                            <span>Backend developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services mb-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Apartments</h2>
+            </div>
+            <div class="row">
+                
+                
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark" asp-page="/AppOne" aria-disabled="false">
+                        <div class="icon-box">
+                            <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/The-Max_606-W-57th-St_3503_Open-Kitchen_Living-Room.jpg" alt="">
+                            <h4>606 W 57th St</h4>
+                            <strong class="mb-4">Midtown West</strong>
+                            <p>3 Bed, 2 Bath</p>
+                            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                            <p>$8 210</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark"  aria-disabled="false" asp-page="/AppTwo">
+                        <div class="icon-box">
+                            <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/505-W-37th-St_Living-Room_Hudson-River-Views.jpg" alt="">
+                            <h4>2 Gold St</h4>
+                            <strong class="mb-4">Financial District</strong>
+                            <p>3 Bed, 2 Bath</p>
+                            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                            <p>$7 495</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark"  aria-disabled="false" asp-page="/AppThird">
+                        <div class="icon-box">
+                            <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/The-Max_606-W-57th-St-Lobby.jpg" alt="">
+                            <h4>4545 Center Blvd</h4>
+                            <strong class="mb-4"> Long Island City</strong>
+                            <p>2 Bed, 2 Bath</p>
+                            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                            <p>$6 229</p>
+                        </div>
+                     </a>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark"  aria-disabled="false" asp-page="/AppFourth">
+                        <div class="icon-box">
+                            <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/505-W-37th-St_Bedroom_Hudson-River-View.jpg" alt="">
+                            <h4>505 W 37th St</h4>
+                            <strong class="mb-4">Hudson Yards</strong>
+                            <p>2 Bed, 2 Bath</p>
+                            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                            <p>$5 975</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark"  aria-disabled="false" asp-page="/AppFifth">
+                    <div class="icon-box">
+                        <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/4545-Center-Blvd_Lobby_Front-Desk.jpg" alt="">
+                        <h4>4545 Center Blvd</h4>
+                        <strong class="mb-4">Long Island City</strong>
+                        <p>2 Bed, 2 Bath</p>
+                        <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                        <p>$4 995</p>
+                    </div>
+                </a>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <a class="nav-link text-decoration-none text-dark" aria-disabled="false" asp-page="/AppSixth">
+                    <div class="icon-box">
+                        <img src="https://marvel-b1-cdn.bc0a.com/f00000000254107/cdn.tfc.com/marketing/files/building_images/2019-10-7_200-W-26th-St-PHC_corner-dining-terrace.jpg" alt="">
+                        <h4>200 W 26th St</h4>
+                        <strong class="mb-4">Chelsea</strong>
+                        <p>1 Bed, 1 Bath</p>
+                        <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci dignissimos eum ut soluta, culpa reiciendis placeat nobis sunt cumque accusamus!</p>
+                        <p>$4 825</p>
+                    </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+           <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>New York</h3>
+                            <p>Bakery Street<br>
+                            New York 135354, USA<br>
+                            <strong>Phone</strong> +231535 <br>
+                            <strong>E-mail</strong> lorem@gmail.com <br></p>
+                            <div class="social-links mt-3">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                  </svg></a>
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                  </svg></a>
+                                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                                  </svg></a>
+                                  <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" fill="currentColor" class="bi bi-snapchat" viewBox="0 0 16 16">
+                                    <path d="M15.943 11.526c-.111-.303-.323-.465-.564-.599a1.416 1.416 0 0 0-.123-.064l-.219-.111c-.752-.399-1.339-.902-1.746-1.498a3.387 3.387 0 0 1-.3-.531c-.034-.1-.032-.156-.008-.207a.338.338 0 0 1 .097-.1c.129-.086.262-.173.352-.231.162-.104.289-.187.371-.245.309-.216.525-.446.66-.702a1.397 1.397 0 0 0 .069-1.16c-.205-.538-.713-.872-1.329-.872a1.829 1.829 0 0 0-.487.065c.006-.368-.002-.757-.035-1.139-.116-1.344-.587-2.048-1.077-2.61a4.294 4.294 0 0 0-1.095-.881C9.764.216 8.92 0 7.999 0c-.92 0-1.76.216-2.505.641-.412.232-.782.53-1.097.883-.49.562-.96 1.267-1.077 2.61-.033.382-.04.772-.036 1.138a1.83 1.83 0 0 0-.487-.065c-.615 0-1.124.335-1.328.873a1.398 1.398 0 0 0 .067 1.161c.136.256.352.486.66.701.082.058.21.14.371.246l.339.221a.38.38 0 0 1 .109.11c.026.053.027.11-.012.217a3.363 3.363 0 0 1-.295.52c-.398.583-.968 1.077-1.696 1.472-.385.204-.786.34-.955.8-.128.348-.044.743.28 1.075.119.125.257.23.409.31a4.43 4.43 0 0 0 1 .4.66.66 0 0 1 .202.09c.118.104.102.26.259.488.079.118.18.22.296.3.33.229.701.243 1.095.258.355.014.758.03 1.217.18.19.064.389.186.618.328.55.338 1.305.802 2.566.802 1.262 0 2.02-.466 2.576-.806.227-.14.424-.26.609-.321.46-.152.863-.168 1.218-.181.393-.015.764-.03 1.095-.258a1.14 1.14 0 0 0 .336-.368c.114-.192.11-.327.217-.42a.625.625 0 0 1 .19-.087 4.446 4.446 0 0 0 1.014-.404c.16-.087.306-.2.429-.336l.004-.005c.304-.325.38-.709.256-1.047Zm-1.121.602c-.684.378-1.139.337-1.493.565-.3.193-.122.61-.34.76-.269.186-1.061-.012-2.085.326-.845.279-1.384 1.082-2.903 1.082-1.519 0-2.045-.801-2.904-1.084-1.022-.338-1.816-.14-2.084-.325-.218-.15-.041-.568-.341-.761-.354-.228-.809-.187-1.492-.563-.436-.24-.189-.39-.044-.46 2.478-1.199 2.873-3.05 2.89-3.188.022-.166.045-.297-.138-.466-.177-.164-.962-.65-1.18-.802-.36-.252-.52-.503-.402-.812.082-.214.281-.295.49-.295a.93.93 0 0 1 .197.022c.396.086.78.285 1.002.338.027.007.054.01.082.011.118 0 .16-.06.152-.195-.026-.433-.087-1.277-.019-2.066.094-1.084.444-1.622.859-2.097.2-.229 1.137-1.22 2.93-1.22 1.792 0 2.732.987 2.931 1.215.416.475.766 1.013.859 2.098.068.788.009 1.632-.019 2.065-.01.142.034.195.152.195a.35.35 0 0 0 .082-.01c.222-.054.607-.253 1.002-.338a.912.912 0 0 1 .197-.023c.21 0 .409.082.49.295.117.309-.04.56-.401.812-.218.152-1.003.638-1.18.802-.184.169-.16.3-.139.466.018.14.413 1.991 2.89 3.189.147.073.394.222-.041.464Z"/>
+                                  </svg></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Contact us</h4>
+                        <ul>
+                            <li><a href="#">VK</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">FaceBook</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Devoloper</h4>
+                        <ul>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Inst</a></li>
+                            <li><a href="#">VK</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>2022 All rights reserved.</h4>
+                        <p>The work was done for the College of Information Technologies by Matvey Shvyrkalov and Ramil Galyamshin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
